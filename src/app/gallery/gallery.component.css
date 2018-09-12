@@ -1,0 +1,21 @@
+#gallery{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px)
+{
+    #gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media (min-width: 960px)
+{
+    #gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}

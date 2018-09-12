@@ -1,0 +1,7 @@
+<div id="gallery">
+    <app-gallery-card *ngFor="let mountain of mountains"
+    [imgUrl]="mountain.imgUrl"
+    [mountainName]="mountain.name"
+    [mountainHeight]="mountain.altitude" ></app-gallery-card>
+</div>
+ 
