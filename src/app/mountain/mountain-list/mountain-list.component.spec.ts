@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HelloworldComponent } from './helloworld.component';
+import { MountainListComponent } from './mountain-list.component';
 
-describe('HelloworldComponent', () => {
-  let component: HelloworldComponent;
-  let fixture: ComponentFixture<HelloworldComponent>;
+describe('MountainListComponent', () => {
+  let component: MountainListComponent;
+  let fixture: ComponentFixture<MountainListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HelloworldComponent ]
+      declarations: [ MountainListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HelloworldComponent);
+    fixture = TestBed.createComponent(MountainListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

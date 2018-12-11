@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { HelloworldComponent} from '../helloworld/helloworld.component'
 import { NghomeComponent } from '../nghome/nghome.component';
-import { GalleryComponent} from '../gallery/gallery.component'
-
+import { GalleryComponent} from '../gallery/gallery.component';
+import { MountainListComponent } from '../mountain/mountain-list/mountain-list.component';
+import { MountainItemComponent } from '../mountain/mountain-item/mountain-item.component';
 
 const routes: Routes = [
- { path: 'hw', component: HelloworldComponent},
  { path: 'ng', component: NghomeComponent},
- { path: 'ga', component: GalleryComponent},
- { path: '',  component: DashboardComponent}
+ { path: 'ga', component: MountainListComponent},
+ { path: '',  component: DashboardComponent},
+ { path: 'ga/:id', component: MountainItemComponent}
 ];
 
 @NgModule ({
