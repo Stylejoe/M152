@@ -21,9 +21,7 @@ export class MountainListComponent implements OnInit {
 
   private DeserializeMountains() {
     this.mountains = new Map<string, Berg>();
-    const mntParam: string = this.route.snapshot.params['id'];
     const config = environment.mountains;
-
     config.features.forEach(mountain => {
       //contains all the informations
       const prop = mountain.properties;
@@ -40,24 +38,16 @@ export class MountainListComponent implements OnInit {
         ));
     });
 
+    const mntParam: string = this.route.snapshot.params['id'];
     //if an id parameter is given
     if(mntParam)
     {
-      for(let mountain of config.features)
+      const singleMountain: Berg = this.mountains.get(mntParam);
+
+      if(singleMountain)
       {
-        if(mountain.properties.id == mntParam)
-        {
-          this.mountains.clear();
-          this.mountains.set(mountain.properties.id,new Berg
-            (
-              mountain.properties.id, 
-              mountain.properties.name, 
-              mountain.properties.el, 
-              mountain.geometry.coordinates[0], // X 
-              mountain.geometry.coordinates[1], // Y
-              mountain.properties.img
-            ));
-        }
+        this.mountains = new Map<string, Berg>();
+        this.mountains.set(singleMountain.id,singleMountain);
       }
     }
   }

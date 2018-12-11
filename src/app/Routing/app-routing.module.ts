@@ -11,7 +11,7 @@ const routes: Routes = [
  { path: 'ng', component: NghomeComponent},
  { path: 'ga', component: MountainListComponent},
  { path: '',  component: DashboardComponent},
- { path: 'ga/:id', component: MountainItemComponent}
+ { path: 'ga/:id', component: MountainListComponent}
 ];
 
 @NgModule ({
